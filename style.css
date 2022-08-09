@@ -1,0 +1,141 @@
+/* normalizing default rules */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  --main-color: #c0cfd4;
+  --qoute-font: "Open Sans", sans-serif;
+  --primary-color: #f7f7f7;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+/* header-section */
+#header {
+  max-width: 100rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#header h1 {
+  font-family: var(--qoute-font);
+  text-align: center;
+  font-size: 7rem;
+}
+
+#header .flex-wrapper {
+  font-size: 1.6rem;
+  margin: 5px 0;
+}
+
+#header p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: var(--qoute-font);
+}
+
+.main-section {
+  max-width: 100rem;
+  width: 100%;
+  margin: 10px auto;
+  padding: 2rem;
+}
+
+.main-section .intro {
+  width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.main-section .intro .intro-img {
+  width: 30%;
+}
+
+.main-section .intro .intro-img figure img {
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.main-section .intro .intro-img figure figcaption {
+  font-size: 1.7rem;
+}
+
+.main-section .intro .intro-text {
+  width: 60%;
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+
+.main-section ul h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.main-section ul li {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2.2rem;
+  transition: transform .3s ease-in;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.65);
+}
+
+.main-section ul li:hover {
+    transform: scale(1.3);
+}
+
+/* footer */
+.footer {
+    max-width: 100rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.footer h2 {
+    font-size: 2.7rem;
+}
+
+
+/* Media Querys */
+@media only screen and (max-width: 850px) {
+    #header h1 {
+        font-size: 4rem;
+    } 
+    #header p {
+        font-size: 1.5rem;
+    }
+    .main-section .intro {
+        display: block;
+    }
+    .main-section .intro .intro-img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .main-section .intro .intro-text {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
